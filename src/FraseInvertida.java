@@ -5,6 +5,7 @@ public class FraseInvertida {
 	public static void main(String[] args) {
 		
 		String frase;
+		String fraseInvertida = "";
 		String[] token;
 		
 		Scanner input = new Scanner(System.in);
@@ -28,6 +29,36 @@ public class FraseInvertida {
 			}
 			
 		}
+		
+		for(int i = 0; i < token.length; i++) {
+			
+			if(i == 0) {
+				
+				fraseInvertida += token[i].substring(0, 1).toUpperCase() + token[i].substring(1);
+				
+			}else {
+				
+				fraseInvertida += token[i];
+				
+			}
+			
+			if(i == token.length - 1) {
+				
+				fraseInvertida += ".";
+				
+			}else {
+				
+				fraseInvertida += " ";
+				
+			}
+			
+		}
+		
+		System.out.println("Frase original:");
+		System.out.println(frase.substring(0, 1).toUpperCase() + frase.substring(1) + ".");
+		
+		System.out.printf("%nFrase com palvras invertidas:%n");
+		System.out.println(fraseInvertida);
 
 	}
 
