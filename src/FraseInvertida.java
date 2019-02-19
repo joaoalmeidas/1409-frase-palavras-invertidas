@@ -19,6 +19,13 @@ public class FraseInvertida {
 		for(int i = 0; i < token.length; i++) {
 			
 			String palavraNormal = token[i];
+			token[i] = "";
+			
+			for(int j = palavraNormal.length() - 1; j >= 0; j--) {
+				
+				token[i] += palavraNormal.charAt(j);
+				
+			}
 			
 		}
 
